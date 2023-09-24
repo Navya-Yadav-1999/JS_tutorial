@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NumberObject</title>
+</head>
+<body>
+<h1>NumberObjects</h1>
+<script>
+var x = 56;n = 456789;y = new Number(56); z= new Number(56);s= x.toString();e = x.toExponential(3);f = x.toFixed(4);f1 = n.toString(5);
+document.writeln("TYPE OF X:"+typeof x+"<br>");
+document.writeln("TYPE OF Y:"+typeof y4+"<br>");
+document.writeln("TYPE OF Z:"+typeof z+"<br>");
+document.writeln("TYPE OF S:"+typeof s+"<br>");
+document.writeln("Exponential form:"+e+"<br>");
+document.writeln("To fixed point:"+f+"<br>");
+document.writeln("TYPE OF Y:"+f1+"<br>");
+document.writeln("X==y:"+(x==y)+"<br>");       //compare both values
+document.writeln("X===y:"+(x===y)+"<br>");     //compare both datatypes
+document.writeln("Y===Z:"+(y===z)+"<br>");     //2 objectsvcan't be compared
+var a = Number(e);
+var b = parseInt(f);
+var c = parseFloat(f);
+document.writeln("TYPE OF A : "+typeof a+"<br>");     //string is converted into number format
+document.writeln("TYPE OF B : "+typeof b+"<br>"+"value of B"+b+"<br>");
+document.writeln("TYPE OF C : "+typeof c+"<br>"+"value of C"+c+"<br>");
+
+document.writeln("<h1>Number Properties</h1>");
+document.writeln("MIN_VALUE : "+Number.MIN_VALUE+"<br>");
+document.writeln("MAX_VALUE : "+Number.MAX_VALUE+"<br>");
+document.writeln("POSITIVE_INFINITY : "+Number.POSITIVE_INFINITY+"<br>");
+document.writeln("NEGATIVE_INFINITY : "+Number.NEGATIVE_INFINITY+"<br>");
+document.writeln("NOT A NUMBER : "+Number.NaN);
+</script>
+</body>
+</html>

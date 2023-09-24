@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Encapsulation</title>
+</head>
+<body>
+<script>
+
+document.writeln("using class and constructor Invalid marks concept :- "+"<br>");
+class Student      //using class and constructor
+{
+	constructor()
+	{
+		var name;
+		var marks;
+	}
+	getName()
+	{
+		return this.name;
+	}
+	setName(name)
+	{
+		this.name = name;
+	}
+	
+	getMarks()
+	{
+		return this.marks;
+	}
+	setMarks(marks)
+	{
+		//this.marks =marks;
+		
+		if(marks>0&&marks<100)
+		{
+			this.marks = marks;
+		}
+		else
+		{
+			alert("invalid marks");
+		}
+	}
+}
+	
+	var stud = new Student();
+	stud.setName("Nissi");
+	//stud.setMarks(95);
+	stud.setMarks(105);
+	
+	document.writeln(stud.getName()+" "+stud.getMarks()+"<br>"+"<br>");
+	
+document.writeln("encapsulation with property-based approach :- "+"<br>");		
+function Student1(name, marks)            //using function methods
+{
+	var s_name = name;
+	var s_marks = marks;
+	Object.defineProperty(this, "name",
+	{
+		get:function()
+		{
+			return s_name;
+		},
+		set:function(s_name)
+		{
+			this.s_name = s_name;
+		}
+	} 
+	);
+	Object.defineProperty(this, "marks",
+	{
+		get:function()
+		{
+			return s_marks;
+		},
+		set:function(s_marks)
+		{
+			this.s_marks = s_marks;
+		}
+	}
+	);
+}	
+	var stud1 = new Student1("Nancy", 56);
+	document.writeln(stud1.name+" "+stud1.marks+"<br>"+"<br>");
+	
+
+document.writeln("Custom class with extends keyword :- "+"<br>");	
+class Bike
+{
+	constructor()
+	{
+		this.company = "Miracle";
+	}
+}
+class Vehicle extends Bike
+{
+	constructor(name,salary)
+	{
+		super();
+		this.name = name;
+		this.salary = salary;
+	}	
+}
+var v = new Vehicle("Navya", 35000);
+document.writeln(v.company+" "+v.name+" "+v.salary+"<br>"+"<br>");
+
+document.writeln("inheritance concept inbuild object 'date and time' :- "+"<br>");
+
+class Moments extends Date
+{
+	constructor()
+	{
+		super();
+	}
+}
+
+var m = new Moments();
+document.writeln("Current date and time :- "+"<br>");
+document.writeln(m.getDate()+"-"+m.getMonth()+1+"-"+m.getFullYear()+"::"+m.getHours()+":"+m.getMinutes()+":"+m.getSeconds()+"<br>"+"<br>");
+
+document.writeln("extends with proto-type based approach :- "+"<br>");
+function Bike1(company)       //constructor function & here we no need to take class and extends keyword
+{
+	this.company = company;
+}
+Bike1.prototype.getCompany = function()
+{
+	return this.company;
+}
+function Vehicle1(name,price)     //another constructor
+{
+	this.name = name;
+	this.price = price;
+}
+
+var bike1 = new Bike1("Motorala");
+Vehicle1.prototype = bike1;      //now bike treat as parent of vehicle
+var vehicle1 = new Vehicle1("Nancy", 50000);
+document.writeln(vehicle1.getCompany()+" "+vehicle1.name+" "+vehicle1.price+"<br>"+"<br>");
+
+document.writeln("polymorphism concept with prototype based approach"+"<br>");
+function A()
+{
+	
+}
+A.prototype.display = function()
+{
+	return "A is invoked";
+}
+
+function B()
+{
+	 
+}
+B.prototype = Object.create(A.prototype);
+
+var b = [new A(),new B()]
+b.forEach(function(msg)
+{
+	document.writeln(msg.display()+"<br>");
+}
+); 
+
+</script>
+</body>
+</html>

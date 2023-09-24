@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ConditionalStatements</title>
+<style>
+#res{background-color : lightblue;
+	color : red	}
+	</style>
+<script>
+/*function Age()*/
+function Relation()
+{
+	//if(document.getElementById("t1").value>=18)
+	if(document.getElementById("t1").value==document.getElementById("t2").value)
+	{
+		/*window.alert("you are eligible for voting");*/
+		/*document.writeln("you are eligible for voting");*/
+		/*document.getElementById("res").innerHTML = "you are eligible for voting";*/
+		document.getElementById("res").innerHTML = "both are same";
+	}
+	else if(document.getElementById("t1").value>document.getElementById("t2").value)
+	{
+		/*window.alert("you are not eligible for voting");*/
+		/*document.writeln("you are not eligible for voting");*/
+		/*document.getElementById("res").innerHTML = "you are not eligible for voting";*/
+		document.getElementById("res").innerHTML = "t1 is greater than t2";
+	}
+	else
+	{
+		document.getElementById("res").innerHTML = "t1 is smaller than t2";
+	}
+}
+</script>
+</head>
+<body>
+Enter the first element value(t1):<input type = "text" id = "t1"><br><br>
+Enter the second element value(t2):<input type = "text" id = "t2"><br><br>
+<button type = "button" onclick = "Relation()">Verify</button>
+<div id = "res"></div>
+</body>
+</html>

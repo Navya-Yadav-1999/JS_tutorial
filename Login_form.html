@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LoginForm</title>
+<style>
+body{text-align:center;
+background-color:seagreen}
+.Navya{background-color:lightblue;
+border:5px solid black;
+padding-top:30px;
+padding-right:50px;
+padding-bottom:30px;
+padding-left:50px;
+font-style:italic;
+font-family:"Times New Roman";
+font-weight:bold;
+font-color:green;
+margin-top:200px;
+margin-right:400px;
+margin-bottom:200px;
+margin-left:400px}
+</style>
+<script>
+function ClearFields()
+{
+document.getElementById("@UserName").value = "";
+document.getElementById("@PassWord").value = "";
+}
+function Submitfields()
+{
+var UName = document.getElementById("@UserName").value;
+var PWord = document.getElementById("@PassWord").value;
+
+if(UName == "nkolli" && PWord == "Kolli@1999")
+{
+window.location.replace('https://www.google.com/');
+}
+else
+{
+alert('details not found once check your username and password');
+}
+
+}
+</script>
+</head>
+<body>
+<div class = Navya>
+<h2 style = "color:#E4405F">Login form</h2><br>
+<label>UserName</label><br> <input type = "text" placeholder = "Enter Your Username" id = "@UserName"><br>
+<label>PassWord </label><br> <input type = "Password" placeholder = "Enter your Password" id = "@PassWord"><br><br>
+<button type="submit" onclick="Submitfields();">Submit</button>
+<button type="reset" onclick="ClearFields();">Reset</button>
+</div>
+</body>
+</html>

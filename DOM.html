@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>document Object Models</title>
+</head>
+<body>
+
+<script>
+
+function telements()
+{
+	var allgenders = document.getElementsByName("Gender");
+	alert("Total Genders : "+allgenders.length);
+}
+</script>
+
+<form>
+Male: <input type = "radio" name = "Gender" value = "male">
+Female : <input type = "radio" name = "Gender" value = "female">
+
+<input type = "button" onclick = "telements()" value = "Total Genders"><br>
+</form>
+
+
+<script type = "text/javascript">
+
+function showcomments()
+{
+	alert('hi');
+	var data = "name:<br><input type = 'text' name = 'name'><br>Comment : <br><textarea rows = '6' cols = '10'></textarea><br><input type = 'submit' value = 'comment'> ";
+	 
+	 document.getElementById('location').innerHTML = data;
+}
+</script>
+
+<form name = "MyForm">
+
+<input type = "button" value = "Comment" onclick = "showcomments()">
+<div id = "location"></div>
+</body>
+</form>
+</html>

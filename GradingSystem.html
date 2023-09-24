@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GrdaingSystem</title>
+<style>
+body{text-align: center}
+</style>
+<script>
+function GradingSystem()
+{
+document.getElementById("per").value = (document.getElementById("om").value/document.getElementById("mm").value)*100;
+var percentage = document.getElementById("per").value
+var grade;
+switch(Math.floor(percentage/10))
+{
+	case 9:
+	case 8:grade = "Outstanding";
+					break;
+	case 7:grade = "Distinction";
+					break;
+	case 6:grade = "Good";
+					break;
+	case 5:grdae = "Average";
+					break;
+	case 4:grdae = "Pass";
+					break;
+	default:grade = "Fail";
+					break;
+}
+document.getElementById("grad").value = grade;
+}
+</script>
+</head>
+<body>
+<h1>Percentage & Grade Calculator</h1>
+MaxMarks : <input type= "text" id = "mm"><br><br>
+ObtainedMarks : <input type = "text" id = "om"><br><br>
+<button type = "button" onclick = "GradingSystem()">Submit</button><br><br>
+Percentage : <input type = "text" id = "per"><br><br>
+Grade : <input type = "text" id = "grad">
+</body>
+</html>

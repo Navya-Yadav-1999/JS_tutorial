@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>StringObjects</title>
+</head>
+<body>
+<h1>StringObjects</h1>
+<script>
+var x = "Matthew says Blessed are those who hunger and thirst for righteousness, for they will be filled."
+document.write(x,"<br>");
+var x1 = 'she is so gorgeous';
+document.write(x1+"<br>");
+document.write(typeof x1+"<br>");
+document.write("slice : ",x.slice(0,12),"<br>",x.slice(0,-15),"<br>");  // slice will accept positive and negative positions
+document.write("replace : ",x1.replace("gorgeous", "Beautiful"),"<br>");
+var y = "  Navya Yadav  ";
+document.write("trim : ",y.trim(),"<br>");
+document.write("charCodeAt : ",x.charCodeAt(5),"<br>");
+
+for(i = 0;i<=x.length;i++)
+	document.write(x[i],"<br>");
+
+</script>
+</body>
+</html>

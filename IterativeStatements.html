@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IterativeStatements</title>
+</head>
+<body>
+<h1>Iterative Statements</h1>
+<h2 id = "res"></h2>
+<script>
+ var i= 0; res = " ";
+ //for(i = 0;i<=100;i++)
+for(;i<=100;)
+// while(i<=100)
+ {
+	res+= i+" ";
+	if(i%5==0)
+	res+="<br>";
+	i++;
+ }
+ document.getElementById("res").innerHTML = res;
+</script>
+</body>
+</html> 

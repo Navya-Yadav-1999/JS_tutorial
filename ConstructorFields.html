@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>constructorField</title>
+</head>
+<body>
+<script>
+class Test
+{
+	/*constructor()
+	{
+		document.writeln(Test.display()+"<br>");
+		//document.writeln(this.constructor.display()+"<br>");
+	}*/
+	static display()
+	{
+		return "invoking the method with class and construcor fields";
+	}
+	show()
+	{
+		document.writeln(Test.display()+"<br>");
+	}
+}
+var t = new Test();
+t.show();
+</script>
+</body>
+</html>

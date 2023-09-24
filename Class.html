@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class</title>
+</head>
+<body>
+<script>
+
+/*Class Employee      //create one class with starting letter uppercase
+
+//var emp = class      // create a class expression
+
+var emp = class Employee
+{
+	Constructor(id, name)    //declare an object
+	{
+		this.id = id;
+		this.name = name;
+	}
+	detail()        //declare a method
+	{
+		document.writeln(this.id+" "+this.name+" "+"<br>")
+	}
+}
+	var e1 = new Employee(8685, "Navya");    // Passing object to variables
+	var e2 = new Employee(8677, "Sowji");
+	var e3 = new Employee(8758, "Layamma");
+	
+	e1.detail();    //calling method
+	e2.detail();
+	e3.detail();
+
+}
+document.writeln(emp.name);*/
+
+
+function Employee(firstname, surname)
+{
+	this.firstname = firstname;
+	this.surname = surname;
+}
+Employee.prototype.fullname = function()
+{
+	return this.firstname + " " + this.surname;
+}
+var employee1 = new Employee("Navya", "Kolli");
+var employee2 = new Employee("Laharika", "chintakyala");
+document.writeln(employee1.fullname()+"<br>");
+document.writeln(employee2.fullname()+"<br>"+"<br>");
+
+class CompanyName
+{
+	constructor()
+	{
+		this.company = "Miracle";
+	}
+}
+
+class Employee1 extends CompanyName
+{
+	constructor(id, name)
+	{
+	super();
+	this.id = id;
+	this.name = name;
+	}
+}
+var emp = new Employee1(23, "sowjanya");
+var emp1 = new Employee1(32, "Revathi");
+
+document.writeln(emp.id+" "+emp.name+" "+emp.company+"<br>");
+document.writeln(emp1.id+" "+emp1.name+" "+emp1.company+"<br>"+"<br>");	
+
+class Test
+{
+	static display1()
+	{
+		return "Fullastack Developers";            //static method invoked again
+	}
+	static display()
+	{
+		return "updated CompanyName Miracle";
+	}
+}
+document.writeln(Test.display());          //override the method
+document.writeln(Test.display1());
+</script>
+</body>
+</html>
